@@ -1,0 +1,61 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "id": "@id",
+    "type": "@type",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "ApplicationInformation": {
+      "@id": "https://trusted-web.jp/#EmailAddress",
+      "@context": {
+        "email": "schema:email",
+        "applicationDate": {
+          "@id": "schema:uploadDate",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+    "Reference": {
+      "@id": "https://trusted-web.jp/#Reference",
+      "@context": {
+        "reference": {
+          "@id": "https://trusted-web.jp/#ReferenceText",
+          "@context": {
+            "text": "schema:text",
+            "author": "schema:author"
+          }
+        }
+      }
+    },
+    "JapanCitizenshipCredential": {
+      "@id": "https://trusted-web.jp/#JapanCitizenshipCredential",
+      "@context": {
+        "address": "schema:address",
+        "birthDate": {
+          "@id": "schema:birthDate",
+          "@type": "xsd:dateTime"
+        },
+        "familyName": "schema:familyName",
+        "givenName": "schema:givenName",
+        "gender": "schema:gender"
+      }
+    },
+    "EmployeeCredential": {
+      "@id": "https://trusted-web.jp/#EmployeeCredential",
+      "@context": {
+        "worksFor": {
+          "@id": "schema:Corporation",
+          "@type": "@id"
+        },
+        "memberOf": {
+          "@id": "schema:Organization",
+          "@type": "@id"
+        },
+        "jobTitle": "schema:jobTitle"
+      }
+    },
+    "Corporation": "schema:Corporation",
+    "Person": "schema:Person"
+  }
+}
